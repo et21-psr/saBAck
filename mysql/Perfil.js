@@ -1,17 +1,17 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Perfil = sequelize.define("Perfil", {
+  var Perfil = sequelize.define("perfil", {
     id_perfil: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
     seguidos:{
-        type : DataTypes.INT
+        type : DataTypes.INTEGER
     },
     seguidores:{
-        type : DataTypes.INT
+        type : DataTypes.INTEGER
     },
     foto_perfil:{
         type : DataTypes.STRING
@@ -22,8 +22,16 @@ module.exports = function(sequelize, DataTypes) {
     alias:{
         type : DataTypes.STRING
     },
+    createdAt:{
+      type : DataTypes.DATE,
+      field: "created_at"
+    },
+    updatedAt:{
+      type : DataTypes.DATE,
+      field: "updated_at"
+    }
   }, { freezeTableName: true,
-  tableName: 'Perfil'});
+  tableName: 'perfil'});
 
 
 

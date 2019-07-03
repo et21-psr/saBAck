@@ -4,10 +4,11 @@ module.exports = {
                      "prod": {
                        "host": "localhost",
                        "database": "twinder",
-                       "username": "Root",
+                       "username": "root",
                        "password": "",
                        "dialect": "mysql",
                        //"logging":  true
                      }
+                   }
 
 			   }

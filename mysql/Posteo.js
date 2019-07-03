@@ -1,15 +1,12 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Posteo = sequelize.define("Posteo", {
-    id: {
+  var Posteo = sequelize.define("posteo", {
+    id_posteo:{
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
-    },
-    id_posteo:{
-        type : DataTypes.INT
-    },
+     },
     texto:{
         type : DataTypes.STRING
     },
@@ -20,10 +17,18 @@ module.exports = function(sequelize, DataTypes) {
         type : DataTypes.DATE
     },
     categoria:{
-      type : DataTypes.INT
-
+      type : DataTypes.INTEGER
+    },
+    createdAt:{
+      type : DataTypes.DATE,
+      field: "created_at"
+    },
+    updatedAt:{
+      type : DataTypes.DATE,
+      field: "updated_at"
+    }
   }, { freezeTableName: true,
-  tableName: 'Posteo'});
+  tableName: 'posteo'});
 
 
 
