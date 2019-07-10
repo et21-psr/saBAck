@@ -26,6 +26,7 @@ module.exports = function(sequelize, DataTypes) {
 
 
 
+
 //Tarjeta.removeAttribute('id');
   return PosteoPerfil;
 };
