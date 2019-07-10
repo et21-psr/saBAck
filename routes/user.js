@@ -11,6 +11,17 @@ router.get('/', function(req, res, next) {
 
   })
 });
+router.get('/:id', function(req, res, next) {
 
+let id = req.params.id;
+
+models.usuario.findOne({
+  where:{
+    id_user: id
+    }
+  }).then(result => {
+      res.status(200).jsonp(result);
+  });
+})
 
 module.exports = router;
