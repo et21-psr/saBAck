@@ -25,4 +25,17 @@ models.posteo.findOne({
   });
 })
 
+router.delete('/:id', function(req, res, next) {
+
+let id = req.params.id;
+
+models.posteo.destroy({
+  where:{
+    id_posteo: id
+    }
+  }).then(result => {
+      res.status(200).jsonp(result);
+  });
+})
+
 module.exports = router;

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var models =  require("./../mysql")
 
-/* GET users listing. */
+/*Muestra todos los usuarios */
 router.get('/', function(req, res, next) {
 
   models.perfil.findAll().then(perfil =>{
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
   })
 });
-
+/* Muestra un usuario especifico. */
 router.get('/:id', function(req, res, next) {
 
 let id = req.params.id;

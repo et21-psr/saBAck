@@ -24,4 +24,27 @@ models.usuario.findOne({
   });
 })
 
+
+router.delete('/:id', function(req, res, next) {
+
+let id = req.params.id;
+
+models.usuario.destroy({
+  where:{
+    id_user: id
+    }
+  }).then(result => {
+      res.status(200).jsonp(result);
+  });
+})
+
+
+router.post('/', function(req, res, next) {
+
+let user = req.body;
+console.log(user);
+res.status(200).jsonp(user);
+
+
+})
 module.exports = router;
