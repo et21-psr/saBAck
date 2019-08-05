@@ -11,10 +11,11 @@ router.get('/', function(req, res, next) {
 
   })
 });
+
 router.get('/:id', function(req, res, next) {
 
 let id = req.params.id;
-
+/*------------------ */
 models.usuario.findOne({
   where:{
     id_user: id
@@ -42,9 +43,11 @@ models.usuario.destroy({
 router.post('/', function(req, res, next) {
 
 let user = req.body;
-console.log(user);
-res.status(200).jsonp(user);
+  models.usuario.create(user).then(user =>{
 
+  res.status(200).jsonp(user);
 
+  })
 })
+
 module.exports = router;

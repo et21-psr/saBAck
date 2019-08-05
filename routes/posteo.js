@@ -38,4 +38,15 @@ models.posteo.destroy({
   });
 })
 
+
+router.post('/', function(req, res, next) {
+
+let posteo = req.body;
+  models.posteo.create(posteo).then(posteo =>{
+
+  res.status(200).jsonp(posteo);
+
+  })
+})
+
 module.exports = router;
