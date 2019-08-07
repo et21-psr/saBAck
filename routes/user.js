@@ -43,6 +43,7 @@ models.usuario.destroy({
 router.post('/', function(req, res, next) {
 
 let user = req.body;
+  console.log (user)
   models.usuario.create(user).then(user =>{
 
   res.status(200).jsonp(user);
