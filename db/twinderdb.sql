@@ -32,7 +32,3 @@ CREATE TABLE `posteo` (
   CONSTRAINT `categoriaposteo` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`idcategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `usuario` (
-  `nombreUser` varchar(45) NOT NULL,
-  `contraseña` varchar(45) NOT NULL,
-  `fechaNacim` date NOT NULL,
