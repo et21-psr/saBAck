@@ -16,39 +16,26 @@
 
 
     <meta charset="utf-8">
-    <title>HOLA</title>
+    <title>INICIO</title>
   </head>
   <body>
 
+
+
+
+
+
+
+
     <div class="jumbotron text-center">
-  <h1>TWINDER</h1>
-  <p>Bienvenido</p>
+  <h1>INICIO</h1>
+  <p></p>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Crear Usuario</h3>
-      <p>    <form id="usuariosform">
 
-            <br>Nombre de Usuario: </br> <input type= "text" value= "Juan" id="nombre_user" >
-
-            <br>Contraseña: </br> <input type= "password" value= "iconos21"  id="contraseña">
-
-            <br>Fecha de Nacimiento: </br> <input type= "date"  id="nacimiento" >
-
-            <br>País: </br> <input type= "text" value= "Argentina"  id="pais">
-
-            <br>Correo: </br> <input type= "text" value="juan@hotmail.com"  id="correo">
-
-            <br>Sexo: </br> <input type= "text" value="Masculino"  id="sexo">
-
-            <br>Situación Sentimental: </br>  <input type= "text" value="Soltero"  id="sentimental">
-
-            <br>  <input type="submit" value="CREAR USUARIO"> </br>
-
-      </form>
-    </p>
     </div>
     <div class="col-sm-4">
       <h3>INICIO</h3>
@@ -59,13 +46,8 @@
       </p>
     </div>
     <div class="col-sm-4">
-      <h3>Borrar Usuario</h3>
-      <p>  <form id="borrar">
-
-          <br> <input type="text" id="borraruser">
-          <br>  <input type="submit" value="BORRAR USUARIO"> </br>
-
-        </form>
+      <h3></h3>
+      <p>
       </p>
     </div>
   </div>
@@ -99,10 +81,12 @@
 
 //GET
 $( "#consultar" ).submit(function( event ) {
-        $.get( "http://localhost:3000/posteo", function( posteo ) {
+        event.preventDefault();
 
-          usuarios.forEach(function( posteo ){
-            console.log( usuario.id_posteo );
+        $.get( "http://localhost:3000/posteo/", function( posteo ) {
+
+          posteo.forEach(function( posteo ){
+            console.log( posteo.id_posteo );
 
           })
           })
