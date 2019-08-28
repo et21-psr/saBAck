@@ -1,6 +1,12 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-image: url("fondo2.png");
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+
+
 }
 
 a {
