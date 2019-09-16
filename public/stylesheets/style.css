@@ -1,8 +1,10 @@
 body {
   padding: 50px;
-  font: 14px "Helvetica", Helvetica, Arial, sans-serif;
+  font: 17px "Helvetica", Helvetica, Arial, sans-serif;
+
   margin: 0;
   background-image: url("fondo2.png");
+
   background-repeat: no-repeat;
  background-attachment: fixed;
 
@@ -11,4 +13,10 @@ body {
 
 a {
   color: #00B7FF;
+}
+#divingreso{
+  color:black;
+}
+#usuariosform{
+  color:white;
 }

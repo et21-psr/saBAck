@@ -51,4 +51,27 @@ let user = req.body;
   })
 })
 
+
+router.post('/login', function(req, res, next) {
+
+let user = req.body;
+  console.log (user)
+  models.usuario.findOne({
+    where:{
+      nombre_user: user.nombre_user,
+      contraseña: user.contraseña,
+      }
+    }).then(result => {
+      if(result){
+        res.status(200).jsonp("BIENVENIDO"+result.nombre_user);
+
+      }
+      else {
+
+        res.status(200).jsonp("ERROR");
+      }
+
+    });
+})
+
 module.exports = router;
