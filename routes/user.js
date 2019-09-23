@@ -55,7 +55,7 @@ let user = req.body;
 router.post('/login', function(req, res, next) {
 
 let user = req.body;
-  console.log (user)
+  console.log (user);
   models.usuario.findOne({
     where:{
       nombre_user: user.nombre_user,
@@ -67,11 +67,11 @@ let user = req.body;
 
       }
       else {
-
         res.status(200).jsonp("ERROR");
       }
 
     });
+
 })
 
 module.exports = router;
