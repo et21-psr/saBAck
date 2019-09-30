@@ -55,20 +55,41 @@ let user = req.body;
 router.post('/login', function(req, res, next) {
 
 let user = req.body;
+
   console.log (user);
+
+  function clickedButton()
+{
+window.location.href = 'posteo.html'
+
+}
+
+
   models.usuario.findOne({
     where:{
       nombre_user: user.nombre_user,
       contraseña: user.contraseña,
       }
-    }).then(result => {
+
+    })
+
+
+    .then(result => {
+
       if(result){
-        res.status(200).jsonp("BIENVENIDO"+result.nombre_user);
+        res.status(200).jsonp("BIENVENIDO " +result.nombre_user);
+               clickedButton()
+
+
+
+
 
       }
       else {
         res.status(200).jsonp("ERROR");
+
       }
+
 
     });
 

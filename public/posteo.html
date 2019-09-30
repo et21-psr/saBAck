@@ -42,7 +42,7 @@
       <h3>INICIO</h3>
       <p><form id="consultar">
             <br>  <input type="submit" value="CONSULTAR POSTEOS"> </br>
-
+            
           </form>
       </p>
     </div>
@@ -81,7 +81,7 @@
 });
 
 //GET
-$( "#consultar" ).submit(function( event ) {
+
         event.preventDefault();
 
         $.get( "http://localhost:3000/posteo/", function( posteo ) {
@@ -90,8 +90,8 @@ $( "#consultar" ).submit(function( event ) {
             console.log( posteo.id_posteo );
 
           })
-          })
-            });
+        });
+
 
 //BORRAR
   $( "#borrar" ).submit(function( event ) {
