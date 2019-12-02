@@ -3,7 +3,7 @@ module.exports = {
                    "db": {
                      "prod": {
                        "host": "localhost",
-                       "database": "twinder",
+                       "database": "mydb",
                        "username": "root",
                        "password": "",
                        "dialect": "mysql",

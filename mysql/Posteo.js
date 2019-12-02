@@ -26,7 +26,8 @@ module.exports = function(sequelize, DataTypes) {
     updatedAt:{
       type : DataTypes.DATE,
       field: "updated_at"
-    }
+    },
+
   }, { freezeTableName: true,
   tableName: 'posteo'});
 
